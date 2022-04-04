@@ -14,14 +14,14 @@ import { Artist, ArtistDocument } from '../schemas/artist.schema';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { CreateArtistDto } from './create-artist.dto';
 import { Album, AlbumDocument } from '../schemas/album.schema';
-import { Track } from '../schemas/track.schema';
+import { Track, TrackDocument } from '../schemas/track.schema';
 
 @Controller('artists')
 export class ArtistsController {
   constructor(
     @InjectModel(Artist.name) private artistModel: Model<ArtistDocument>,
     @InjectModel(Album.name) private albumModel: Model<AlbumDocument>,
-    @InjectModel(Track.name) private trackModel: Model<ArtistDocument>,
+    @InjectModel(Track.name) private trackModel: Model<TrackDocument>,
   ) {}
 
   @Get()
