@@ -8,7 +8,7 @@ import {
   Query,
   UploadedFile,
   UseInterceptors,
-} from "@nestjs/common";
+} from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { Album, AlbumDocument } from '../schemas/album.schema';
