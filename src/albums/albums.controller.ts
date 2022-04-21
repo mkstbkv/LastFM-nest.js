@@ -24,9 +24,9 @@ export class AlbumsController {
   ) {}
 
   @Get()
-  getAll(@Query() artist: string) {
-    if (artist) {
-      return this.albumModel.find({ _id: artist });
+  getAll(@Query() artist: { [key: string]: string }) {
+    if (artist.artist) {
+      return this.albumModel.find({ artist: artist.artist });
     }
     return this.albumModel.find();
   }
